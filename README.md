@@ -44,16 +44,16 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - has_many :comments
-- has_many :posts_tags
-- has_many  :tags,  through:  :posts_tags
+- has_many :posts_groups
+- has_many  :groups,  through:  :posts_groups
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-||text|null: false|
+|group|text|null: false|
 ### Association
-- has_many :posts_tags
-- has_many  :posts,  through:  :posts_tags
+- has_many :posts_groups
+- has_many  :posts,  through:  :posts_groups
 
 ## groups_postsテーブル
 |Column|Type|Options|
