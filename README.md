@@ -16,7 +16,7 @@
 |password|string|null: false|
 |name|string|null: false|
 ### Association
-- has_many :groups :through groups_users
+- has_many :groups :through: :groups_users
 - has_many :messages
 - has_many :groups_users
 
@@ -38,4 +38,4 @@
 ### Association
 - has_many : messages
 - has_many :groups_users
-- has_many :user :through groups_user
+- has_many :user :through: :groups_users
