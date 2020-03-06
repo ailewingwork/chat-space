@@ -37,9 +37,5 @@
 |name|string|null: false|
 ### Association
 - has_many : messages
-<<<<<<< HEAD
 - has_many :groups_users
 - has_many :user :through groups_user
-=======
-- belongs_to :user :through groups_use
->>>>>>> c4db73ef599891d5b39ed9234fe51052934f2add
