@@ -1,4 +1,3 @@
-
 # chat-space DB設計
 
 ## groups_usersテーブル
@@ -19,12 +18,15 @@
 ### Association
 - has_many :groups :through groups_users
 - has_many :messages
+- has_many :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false|
-|image|string|null:false|
+|text|string||
+|image|string||
+|group_id|string|null: false,foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -32,9 +34,12 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|text|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many : messages
-- belongs_to :user :through groups_user
+<<<<<<< HEAD
+- has_many :groups_users
+- has_many :user :through groups_user
+=======
+- belongs_to :user :through groups_use
+>>>>>>> c4db73ef599891d5b39ed9234fe51052934f2add
