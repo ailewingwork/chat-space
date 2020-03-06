@@ -1,4 +1,3 @@
-
 # chat-space DB設計
 
 ## groups_usersテーブル
@@ -37,4 +36,4 @@
 |text|integer|null: false, foreign_key: true|
 ### Association
 - has_many : messages
-- belongs_to :user :through groups_user
+- belongs_to :user :through groups_use
