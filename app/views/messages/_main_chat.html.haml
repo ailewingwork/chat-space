@@ -1,0 +1,30 @@
+.mainchat
+  .mainchat__header
+    .mainchat__header__leftbox
+      .mainchat__header__leftbox__current-group
+        ここはグループ名です
+      .mainchat__header__leftbox__member-list
+        Member:
+    .mainchat__header__edit-btn
+      = link_to "#", class: "edit-btn" do
+        EDIT
+  .mainchat__message
+    .mainchat__message__upper-info
+      .mainchat__message__upper-info__taker
+        投稿者名やで
+      .mainchat__message__upper-info__date
+        ここ日付入るで
+    .mainchat__message__text
+      投稿者のコメント入るで
+  .mainchat__form
+    .mainchat__form__new-message
+      .mainchat__form__new-message__input-box
+        .mainchat__form__new-message__input-box__text
+          type a message
+        .mainchat__form__new-message__input-box__image
+          .mainchat__form__new-message__input-box__image__failimage
+            %label{class: "image__btn image__btn--image"}
+              = icon('fas', 'image', class: "image__btn--icon")
+              %input{type: "file"}
+      .mainchat__form__new-message__submit-btn
+        Send

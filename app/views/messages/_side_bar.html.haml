@@ -1,0 +1,21 @@
+.sidebar
+  .sidebar__header
+    .sidebar__header__box
+      .sidebar__header__box__username
+        username
+      
+      .sidebar__header__box__menu
+      
+        .sidebar__header__box__menu__newgroup
+          = link_to "#", class: "newgroup__btn" do
+            = icon('fas', 'edit')
+        .sidebar__header__box__menu__edituser
+          = link_to "#", class: "edituser__btn" do
+            = icon('fas', 'cog')
+
+  .sidebar__group
+    .sidebar__group__list
+      .sidebar__group__list__name
+        ここはグループ名です。15pxです。
+      .sidebar__group__list__message
+        ここはグルーブメッセージです。11pxです
