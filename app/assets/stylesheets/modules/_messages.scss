@@ -40,7 +40,6 @@
   &__group{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-    color: white;
     &__list{
       padding: 0 20px;
       &__name{
@@ -50,6 +49,10 @@
       &__message{
         font-size: 11px;
         margin-bottom: 40px;
+      }
+      a{
+        color: white;
+        text-decoration: none;
       }
     }
   }
@@ -97,6 +100,10 @@
       font-size: 16px;
     }
   }
+
+
+
+
   &__message{
     background-color: #fafafa;
     height: calc(100vh - 190px);
@@ -123,49 +130,27 @@
       margin-bottom: 10px;
     }
   }
+
   &__form{
     height: 90px;
     background-color: #d2d2d2;
-    display: flex;
     padding: 20px 40px;
-    &__new-message{
+    position: relative;
+    .new_message{
       display: flex;
-      &__input-box{
-        height: 50px;
-        width: 400px;
-        background-color: white;
-        text-align: left;
-        position: relative;
-        &__text{
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-          line-height: 30px;
-          display: flex;
-          align-items: center;
-          position: relative;
-        }
-        &__image{
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          &__failimage{
-            input{
-            display: none;
-           }
-          }
-          a{
-            color: black;
-          }
-        }
+    }
+      .mainchat_input{
+        width: 100%;
       }
-      &__submit-btn{
-        display: flex;
-        align-items: center;
+      .form__message{
+        height: 50px;
+        width: 100%;
+        padding: 0 0 0 10px;
+        color: #434a54;
+        border-style: none;
+        display: inline-block;
+      }
+      .form__submit{
         width: 100px;
         height: 50px;
         padding: 0 30px;
@@ -173,8 +158,17 @@
         background-color: #38aef0;
         color: white;
         cursor: pointer;
- 
+        display: inline-block;
       }
+    .hidden{
+      display: none;
+    }
+    .form__mask__image{
+      font-size: 1.3rem;
+      top: 30px;
+    right: 180px;
+    cursor: pointer;
+    position: absolute;
     }
   }
 }

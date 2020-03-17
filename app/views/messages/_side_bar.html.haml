@@ -7,15 +7,21 @@
       .sidebar__header__box__menu
       
         .sidebar__header__box__menu__newgroup
-          = link_to "#", class: "newgroup__btn" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         .sidebar__header__box__menu__edituser
           = link_to "#", class: "edituser__btn" do
             = icon('fas', 'cog')
 
   .sidebar__group
-    .sidebar__group__list
-      .sidebar__group__list__name
-        ここはグループ名です。15pxです。
-      .sidebar__group__list__message
-        ここはグルーブメッセージです。11pxです
+    - current_user.groups.each do |group|
+      .sidebar__group__list
+        = link_to group_messages_path(group) do
+          .sidebar__group__list__name
+            = group.name
+          .sidebar__group__list__message
+            = group.show_last_message
+
+
+
+          -# = link_to "#", class: "newgroup__btn" do  10行目link_toと変えた
