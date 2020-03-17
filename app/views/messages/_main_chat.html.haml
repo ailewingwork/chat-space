@@ -2,29 +2,32 @@
   .mainchat__header
     .mainchat__header__leftbox
       .mainchat__header__leftbox__current-group
-        ここはグループ名です
+        = @group.name
       .mainchat__header__leftbox__member-list
-        Member:
+        = current_user.name
     .mainchat__header__edit-btn
-      = link_to "#", class: "edit-btn" do
+      = link_to edit_group_path(@group), class: "edit-btn" do
         EDIT
+
   .mainchat__message
+    = render @messages
     .mainchat__message__upper-info
       .mainchat__message__upper-info__taker
-        投稿者名やで
+        投稿者名
       .mainchat__message__upper-info__date
-        ここ日付入るで
+        ここ日付入る
     .mainchat__message__text
-      投稿者のコメント入るで
+      投稿者のコメント入る
+  
+  
+  
   .mainchat__form
-    .mainchat__form__new-message
-      .mainchat__form__new-message__input-box
-        .mainchat__form__new-message__input-box__text
-          type a message
-        .mainchat__form__new-message__input-box__image
-          .mainchat__form__new-message__input-box__image__failimage
-            %label{class: "image__btn image__btn--image"}
-              = icon('fas', 'image', class: "image__btn--icon")
-              %input{type: "file"}
-      .mainchat__form__new-message__submit-btn
-        Send
+    .mainchat_input
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
