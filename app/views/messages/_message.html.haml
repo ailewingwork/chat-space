@@ -1,10 +1,10 @@
-.message
-  .upper-message
-    .upper-message__user-name
+.message{data: {message: {id: message.id}}}
+  .mainchat__message__upper-info
+    .mainchat__message__upper-info__taker
       = message.user.name
-    .upper-message__date
+    .mainchat__message__upper-info__date
       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  .lower-message
+  .mainchat__message__text
     - if message.content.present?
       %p.lower-message__content
         = message.content
