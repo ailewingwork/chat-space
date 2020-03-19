@@ -4,7 +4,8 @@
       .mainchat__header__leftbox__current-group
         = @group.name
       .mainchat__header__leftbox__member-list
-        = current_user.name
+        - @group.users.each do |user|
+          = user.name
     .mainchat__header__edit-btn
       = link_to edit_group_path(@group), class: "edit-btn" do
         EDIT
@@ -12,8 +13,6 @@
   .mainchat__message
     = render @messages
    
-  
-  
   .mainchat__form
     .mainchat_input
       = form_for [@group, @message] do |f|
