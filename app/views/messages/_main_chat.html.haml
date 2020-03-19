@@ -4,6 +4,7 @@
       .mainchat__header__leftbox__current-group
         = @group.name
       .mainchat__header__leftbox__member-list
+        Member:
         - @group.users.each do |user|
           = user.name
     .mainchat__header__edit-btn
