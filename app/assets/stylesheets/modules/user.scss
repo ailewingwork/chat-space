@@ -6,6 +6,8 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
 
     &__inner--left, &__inner--right {
       float: left;
@@ -17,13 +19,13 @@
       display: block;
     }
   }
-
   &__header {
     h2 {
       margin-bottom: 10px;
       letter-spacing: 3px;
       font-size: 40px;
       font-weight: 200;
+      // width: 50%;
 
       &:after {
         content: '';
@@ -38,6 +40,7 @@
       margin-bottom: 20px;
       font-size: 14px;
       font-weight: 200;
+      
     }
 
     .btn {
@@ -46,6 +49,12 @@
       background-color: #ccc;
       font-size: 14px;
     }
+  }
+  .account-page__inner--right.user-form{
+    justify-content: space-between;
+  }
+  .account-page__inner--left.account-page__header{
+    width: 50%;
   }
 
   .field {
@@ -73,13 +82,14 @@
 
   .btn {
     display: inline-block;
-    height: 50px;
-    padding: 0 30px;
+    // height: 50px;
+    padding: 0 50px;
     line-height: 50px;
     letter-spacing: 1px;
     text-align: center;
     border: none;
     border-radius: 2px;
+    
   }
 
   input[type='submit'] {
@@ -98,6 +108,8 @@
   }
 
   .field-input {
+
+
     .field_with_errors {
       position: relative;
 
