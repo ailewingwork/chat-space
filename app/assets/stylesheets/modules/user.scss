@@ -52,6 +52,7 @@
   }
   .account-page__inner--right.user-form{
     justify-content: space-between;
+    width: 50%;
   }
   .account-page__inner--left.account-page__header{
     width: 50%;
@@ -83,7 +84,7 @@
   .btn {
     display: inline-block;
     // height: 50px;
-    padding: 0 50px;
+    padding: 0 30px;
     line-height: 50px;
     letter-spacing: 1px;
     text-align: center;
